@@ -1,0 +1,182 @@
+//Assigment 1 IOS
+import Foundation
+
+//Q-1. Check if marks are greater than or equal to 40 (Pass/Fail)
+
+let marks = 44
+
+if (marks >= 40){
+  print("Pass")
+}else{
+  print("Fail")
+}
+
+
+//Q-2. Check if number is Even or Odd
+
+let number = 12
+
+if (number % 2 == 0){
+  print("Number is Even")
+}else{
+  print("Number is Odd")
+}
+
+//Q-3. Print Grade based on Marks
+
+let marks = 78
+
+if marks >= 90 && marks <= 100 {
+    print("Grade A")
+} else if marks >= 75 {
+    print("Grade B")
+} else if marks >= 60 {
+    print("Grade C")
+} else {
+    print("Fail")
+}
+
+//Q-4. Use Switch Case to Print Day Name
+
+let day = 6
+
+switch day {
+case 1:
+    print("Monday")
+case 2:
+    print("Tuesday")
+case 3:
+    print("Wednesday")
+case 4:
+    print("Thursday")
+case 5:
+    print("Friday")
+case 6:
+    print("Saturday")
+case 7:
+    print("Sunday")
+default:
+    print("Invalid day")
+}
+
+//Q-5. Find Factorial of a Number
+
+let n = 6
+var fact = 1
+
+if(n >= 0){
+  for i in 1...n{
+    fact = fact * i
+  }
+  print("Factorial of \(n) = \(fact)")
+}
+
+//Q-6. Print Prime Numbers till N
+
+let n = 18
+
+for num in 2...n{
+  var isPrime = true
+
+  for i in 2..<num{
+    if num % i == 0{
+      isPrime = false
+      break
+    }
+  }
+  if isPrime{
+    print(num)
+  }
+}
+
+//Q-7. Check if String is Palindrome
+
+let word = "level"
+
+if word == String(word.reversed()){
+  print("Palindrome")
+}else{
+  print("Not Palindrome")
+}
+
+//Q-8. Write a program to print below Patters:
+//Pattern 1:
+
+for _ in 1...5{
+  for _ in 1...5{
+    print("*",terminator:"")
+  }
+  print()
+}
+
+//Pattern 2:
+
+import Foundation
+
+var space = 3
+var star = 1
+
+for _ in 1...4 {
+
+    for _ in 1...space {
+        print(" ", terminator: "")
+    }
+
+    for _ in 1...star {
+        print("*", terminator: "")
+    }
+
+    print()     
+    space -= 1
+    star += 2
+}
+
+//Pattern 3:
+
+var n = 10
+var count = 1
+
+for _ in 1...4{
+  for _ in 1...count{
+    print(n,terminator: "")
+    n -= 1
+  }
+  print()
+  count += 1
+}
+
+//Pattern 4:
+
+let size = 5
+var left = 1
+var right = size
+
+for _ in 1...size{
+  for pos in 1...size{
+    if pos == left || pos == right{
+      print("*",terminator: "")
+    }else{
+      print("",terminator: "")
+    }
+  }
+  print()
+  left += 1
+  right -= 1
+}
+
+//Pattern 5:
+
+let letters = ["A","B","C","D"]
+var count = 1
+
+for letter in letters{
+  for _ in 1...count{
+    print(letter,terminator: "")
+  }
+  print()
+  count += 1
+}
+
+
+
+
